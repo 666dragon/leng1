@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第二课堂成绩单（学分版）</title>
+    <!-- 引入 QRCode.js 库 -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <style>
+        /* 居中内容 */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column; /* 垂直居中 */
+        }
+        /* 图片样式 */
+        img {
+            max-width: 50%; /* 限制图片宽度 */
+            height: auto; /* 让图片保持纵横比 */
+            margin-bottom: 20px; /* 图片下方间距 */
+        }
+        /* 二维码容器样式 */
+        #qrcode {
+            margin-top: 20px; /* 二维码上方间距 */
+        }
+    </style>
+</head>
+<body>
+    <img src="hhhh/grade.jpg" alt="成绩">
+    <div id="qrcode"></div>
+    
+    <script>
+        // 获取二维码容器
+        var qrcodeContainer = document.getElementById("qrcode");
+        
+        // 实例化 QRCode.js，并生成二维码
+        var qrcode = new QRCode(qrcodeContainer, {
+            text: "file:///C:/xuexi/hhhh/index.html", // 替换为你想要生成二维码的链接
+            width: 200, // 二维码宽度
+            height: 200, // 二维码高度
+        });
+    </script>
+</body>
+</html>
